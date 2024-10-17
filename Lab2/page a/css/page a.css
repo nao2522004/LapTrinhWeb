@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page{
+    width: 47rem;
+    height: 55rem;
+    border: 1px solid black;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.5), 5px 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.header_style{
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sixteen{
+    width: 47rem;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.two-thirds{
+    display: flex;
+    flex-direction: row-reverse;
+    color: #AFAFAF;
+}
+
+
+.one-third img, .two-thirds{
+ transform: scale(0.8);
+ gap: 0.6rem;
+}
+
+.big_padding{
+    background-color: #333333;
+    color: white;
+}
+
+.big_padding .container .sixteen{
+    transform: scale(70%);
+    gap: 1rem;
+}
+
+.sixteen .eight span{
+   font-weight: bold;
+   
+}
+
+.sixteen .eight a{
+    background-color: #2DC0E8;
+    text-decoration: none;
+    padding: 1rem;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Hiệu ứng chuyển đổi */
+    margin-left: 0;
+}
+
+.sixteen .eight a:hover{
+    background-color: aqua;
+}
+
+.sixteen .eight a:active{
+    transform: scale(0.95);
+}
+
+.eight .big_text{
+color: aqua;
+font-size: 1.3rem;
+margin-left: 0;
+}
+
+.eight .big_title{
+    font-size: 3rem;
+}
+
+.eight .normal_text{
+    color:#909090;
+}
+.eight.columns.omega{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.L1_style{
+    text-align: center;
+    padding: 1rem 0 0.4rem 0;
+   
+}
+
+.L2_style{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.L1_style span{
+    color: #333333;
+}
+
+.L2_style span{
+font-size: 0.6rem;
+color:#909090;
+}
+
+#section_normal_6{
+background-color: #EEEEEE;
+height: 13rem;
+box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.stbox.alpha, .stbox.omega{
+    display: flex;
+    width: 37%;
+    background-color: white;
+    border-radius: 0.3rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+
+}
+
+.stbox.alpha .txt_style p, .stbox.omega .txt_style p{
+    font-size: 0.5rem;
+}
+
+.stbox.alpha .txt_style, .stbox.omega .txt_style, .b_style{
+    font-size: 0.4rem;
+    float: right;
+    width: 70%;
+}
+
+.stbox.alpha .b_style, .stbox.omega .b_style{
+    font-size: 0.4rem;
+    float: left;
+    width: 30%;
+    background-color: #F5F5F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 0.3rem;
+}
+
+.stbox.alpha{
+position: relative;
+   float: left;
+   left: 5.5rem;
+   bottom: -1rem;
+}
+
+.stbox.omega{
+    position: relative;
+    bottom: -1rem;
+}
+
+.b_style img{
+border-radius: 100%;
+width: 3rem;
+margin: 0.9rem;
+}
+
+.txt_style img{
+  width: 4rem;
+  position: relative;
+  bottom: -2px;
+}
+
+.txt_style .pix_text{
+   font-size: 0.8rem;
+   color:#65AAFC;
+}
+
+
+.box_1,.box_2.pix_builder_bg{
+    display: flex;
+}
+
+.txt_style{
+    padding-left: 0.3rem;
+}
+
+.sixteen.columns.center_text{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.center_text .f1_style, .f2_style, .second_link{
+    height: 3rem;
+    width: 25rem;
+    text-align: center;
+
+}
+
+.f1_style .pix_text{
+    font-size: 1.3rem;
+    color: #5B9A68;
+    position: relative;
+    bottom: -1rem;
+}
+
+.pix_text, .rights_st, .pixfort_st{
+    color: #909090;
+    font-size: 0.7rem;
+    position: relative;
+}
+
+.rights_st, .pix_text{
+    height: 2rem;
+}
+
+.rights_st  .pix_text{
+    position: relative;
+    top: 0.7rem;
+}
+
+
+.pixfort_st{
+    color: #5B9A68;
+    font-weight: 900;
+}
+.second_link{
+font-size: 3rem;
+}
+
+.second_link a{
+    border: 2.5px solid #5B9A68;
+    color: #5B9A68;
+    text-decoration: none;
+    padding: 0.7rem;
+    font-weight: bold;
+    box-sizing: border-box;
+    position: relative;
+    top: -0.9rem;
+}
+
+.slow_fade.social_button img{
+    width: 1.2rem;
+    position: relative;
+    top: 0.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+

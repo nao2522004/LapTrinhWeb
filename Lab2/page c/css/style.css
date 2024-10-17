@@ -1,0 +1,275 @@
+html, body {
+    margin: 0; 
+    padding: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow-x: hidden;
+}
+/* for id */
+#section_header_2_dark {
+    width: 100vw;
+    height: 80px;
+    background-color: #333;
+    padding-top: 35px;
+    font-family: sans-serif, Tahoma;
+    font-weight: bold;
+    margin: 0; 
+    border: none;
+}
+#section_header_2_dark .navbar-header {
+    float: left;
+}
+#section_header_2_dark .navbar-right {
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-end; 
+}
+#section_header_2_dark ul {
+    padding: 0;
+    margin-right: 0;
+}
+#section_header_2_dark ul li {
+    width: fit-content;
+    list-style-type: none;
+    padding-right: 20px; 
+    margin: 0; 
+    display:flex;
+}
+#section_header_2_dark ul li .text_span {
+    color:#f9c133;
+}
+#section_header_2_dark ul li a {
+    text-decoration: none;
+    color: white;
+    padding-right: 30px;
+}
+
+#section_pix_4 {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: sans-serif, Tahoma;
+    margin: 0;
+}
+
+#section_pix_4 .bgvid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1; 
+}
+
+#section_pix_4 .section_wrapper {
+    position: relative;
+    z-index: 2; 
+    text-align: center;
+    color: white;
+}
+
+#section_pix_4 .title_style {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#section_pix_4 .subtitle_style {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+#section_pix_4 .email_subscribe {
+    background-color: black; 
+    border: 2px solid #333; 
+    padding: 20px; 
+    display: inline-block; 
+    border-radius: 10px; 
+    margin-top: 20px;
+    text-align: center;
+}
+
+#section_pix_4 .email_subscribe input[type="email"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#section_pix_4 .subscribe_btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #f9c133;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#section_pix_4 .subscribe_btn:hover {
+    background-color: #e6b82a; 
+}
+#section_pix_4 .note_st {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: white;
+}
+
+#section_university_5 {
+    height: 500px;
+    font-family: sans-serif, Tahoma;
+    font-weight: bold;
+    padding-top: 20px;
+    margin: 0;
+}
+#section_university_5 .alpha {
+    float:left;
+    width:58%;
+}
+#section_university_5 .alpha .psingle_item {
+    height:90px;
+    padding: 30px 0;
+}
+#section_university_5 .alpha .psingle_item .icon_st {
+    float:left;
+    width: 30%;
+}
+#section_university_5 .alpha .psingle_item .text_st {
+    float:right;
+    width: 70%;
+}
+
+#section_university_5 .alpha .psingle_item .text_st h3 {
+    font-size: 1.3em;
+    font-weight: lighter;
+}
+#section_university_5 .alpha .psingle_item .text_st p {
+    font-size: 1em;
+    color:#b3b3b3;
+    font-weight: lighter;
+}
+#section_university_5 .omega {
+    float:right;
+    width:40%;
+}
+#section_university_5 .omega .pix_builder_bg {
+    background-color: #ebeaea;
+    border-radius: 3px;
+    padding: 10px;
+    width: 360px;
+}
+#section_university_5 .omega .title-style  {
+    font-size: 1.3em;
+    font-weight: lighter;
+    padding-top: 40px;
+}
+
+#section_university_5 .omega .text-style {
+    font-size: 1em;
+    color:#b3b3b3;
+    font-weight: lighter;
+}
+#section_university_5 .omega .f .pix_text {
+    width: 318px; 
+    background-color: #f8f8f8; 
+    border: 2px solid #ccc; 
+    padding: 15px; 
+    border-radius: 3px; 
+    margin-top: 15px; 
+    font-size: 1em;
+    color: #333; 
+    font-weight: normal; 
+}
+
+#section_university_5 .omega .select_st select {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    border-radius: 3px; 
+    margin-bottom: 15px; 
+    width: 350px; 
+    background-color: #f8f8f8; 
+    border: 2px solid #ccc; 
+    padding: 15px; 
+    font-size: 1em;
+    color: #333;
+}
+
+#section_university_5 .send_btn .submit_btn {
+    padding: 12px 20px;
+    background-color: #7cc576; 
+    color: white;
+    width: 350px;
+    border: none;
+    border-radius: 3px; 
+    font-size: 1em; 
+    cursor: pointer; 
+    transition: background-color 0.3s;
+    display: inline-block; 
+    text-align: center; 
+}
+
+#section_university_5 .send_btn .submit_btn:hover {
+    background-color: #6ab65a; 
+}
+#section_ecourse_7 {
+    background-color: #f6f6f6; 
+    color: gray; 
+    padding: 20px 0; 
+    font-family: sans-serif, Tahoma;
+    width: 100vw;
+    margin: 0;
+}
+
+#section_ecourse_7 .rights_st {
+    font-size: 16px; 
+    float: left; 
+}
+
+#section_ecourse_7 .socbuttons {
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-end; 
+}
+
+#section_ecourse_7 .bottom-icons {
+    list-style-type: none;
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+}
+
+#section_ecourse_7 .likes_st {
+    font-size: 16px; 
+    margin-left: 10px; 
+}
+
+#section_ecourse_7 .bottom-icons li {
+    margin: 0 15px;
+}
+
+#section_ecourse_7 .bottom-icons li a {
+    color: gray; 
+    font-size: 18px;
+    transition: color 0.3s; 
+}
+
+#section_party_4 .bottom-icons li a:hover {
+    color: #7cc576; 
+}
+/* for class */
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pixfort_st {
+    color: #72519e;
+    font-weight: bold;
+}

@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.button-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.color-button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+}
+
+.color-button[data-color="red"] {
+  background-color: red;
+}
+
+.color-button[data-color="blue"] {
+  background-color: blue;
+}
+
+.color-button[data-color="green"] {
+  background-color: green;
+}
+
+.color-button[data-color="yellow"] {
+  background-color: yellow;
+  color: black; /* Chữ đen để nổi bật trên nền vàng */
+}
+
+.color-button[data-color="purple"] {
+  background-color: purple;
+}

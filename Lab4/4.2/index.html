@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải phương trình bậc hai</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .input-group {
+            margin-bottom: 10px;
+        }
+
+        input {
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Giải phương trình bậc hai</h1>
+    <h3>ax**2 + bx + 2 = 0</h3>
+
+    <div class="input-group">
+        <label for="a">Hệ số a: </label>
+        <input type="number" id="a" value="0">
+    </div>
+
+    <div class="input-group">
+        <label for="b">Hệ số b: </label>
+        <input type="number" id="b" value="0">
+    </div>
+
+    <div class="input-group">
+        <label for="c">Hệ số c: </label>
+        <input type="number" id="c" value="0">
+    </div>
+
+    <button onclick="giaiPhuongTrinh()">Giải phương trình</button>
+
+    <div class="result" id="result"></div>
+
+    <script>
+        function giaiPhuongTrinh() {
+            var a = parseInt(document.getElementById('a').value);
+            var b = parseInt(document.getElementById('b').value);
+            var c = parseInt(document.getElementById('c').value);
+
+            var delta = b * b - 4 * a * c;
+
+            if (a == 0) {
+                document.getElementById('result').innerHTML = 'Hệ số a phải khác 0';
+                return;
+            }
+
+            if (delta < 0) {
+                ketqua = 'Phương trình vô nghiệm';
+            }else if (delta === 0) {
+                var x = -b / (2 * a);
+                ketqua = 'Phương trình có nghiệm kép: x = ' + x.toFixed(2);
+            }else {
+                var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                var x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                ketqua = 'Phương trình có 2 nghiệm phân biệt:<br> x1 = ' + x1.toFixed(2) + '<br> x2 = ' + x2.toFixed(2);
+            }
+
+            document.getElementById('result').innerHTML = ketqua;
+        }
+
+    </script>
+
+</body>
+
+</html>

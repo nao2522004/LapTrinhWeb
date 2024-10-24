@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính số lần xuất hiện</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        textarea,
+        input[type="text"] {
+            width: 80%;
+            max-width: 600px;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <textarea id="textArea" rows="10" placeholder="Nhập đoạn văn ở đây..."></textarea>
+    <input type="text" id="textField" placeholder="Nhập từ/cụm từ để tìm...">
+    <button onclick="demsolan()">Tính số lần xuất hiện</button>
+    <div id="result"></div>
+
+    <script>
+        function demsolan() {
+            const textArea = document.getElementById('textArea').value;
+            const fieldArea = document.getElementById('textField').value;
+
+            var result;
+            if (fieldArea.trim() === '') {
+                document.getElementById('result').innerHTML = "Vui long nhap tu/cum tu de tim."
+            }
+
+            const regex = new RegExp(fieldArea, 'gi');
+            const matches = textArea.match(regex);
+            const count = matches ? matches.length : 0
+
+            document.getElementById('result').innerHTML = `Số lần xuất hiện của "${fieldArea} " trong đoạn văn: ${count}`
+
+
+        }
+    </script>
+
+</body>
+
+</html>

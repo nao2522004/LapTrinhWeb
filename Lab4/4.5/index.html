@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Rotate Image</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            width: 300px;
+            /* Thay đổi kích thước ảnh nếu cần */
+            transition: transform 0.5s;
+            /* Hiệu ứng chuyển đổi cho việc xoay */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img id="image" src="meme-anh-da-den-xi-ho-gai-dau-cuoi-tru.jpg" alt="Image">
+    </div>
+    <script>
+       let rotation = 0;
+       function rotateImage(){
+        rotation += 15
+        document.getElementById('image').style.transform = `rotate(${rotation}deg)`
+       }
+       setInterval(rotateImage, 2000)
+    </script>
+</body>
+
+</html>

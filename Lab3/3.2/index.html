@@ -12,48 +12,102 @@
 </head>
 
 <body>
-    <form action="" class="form">
+    <form action="" class="form" id="contactForm">
         <div class="header_text">
             <h1>Contact Us</h1>
         </div>
         <div class="input_name">
             FULL NAME*
-            <input type="text" placeholder="Enter Your Name">
+            <input type="text" placeholder="Enter Your Name" id="fullName">
+            <small class="error-message"></small>
         </div>
         <div class="contact_input">
             <div class="input_email">
                 Email*
-                <input type="email" placeholder="Enter Your Email">
+                <input type="email" placeholder="Enter Your Email" id="email">
+                <small class="error-message"></small>
             </div>
             <div class="input_phone">
                 Phone
-                <input type="text" placeholder="Enter Number Phone">
+                <input type="text" placeholder="Enter Number Phone" id="phone">
+                <small class="error-message"></small>
             </div>
         </div>
         <div class="input_services">
-
             <h2>NEEDED SERVICES*</h2>
             <div class="content">
-                <p>Please chooses</p>
+                <p>Please choose</p>
                 <div class="icon">
                     <i class="fa-solid fa-chevron-up"></i>
                     <i class="fa-solid fa-chevron-down"></i>
                 </div>
             </div>
-
+            <small class="error-message"></small>
         </div>
-        <div style="height: 20px;"></div>
         <div class="input_message">
             Message
-            <input type="text" placeholder="Your message here...">
+            <input type="text" placeholder="Your message here..." id="message">
+            <small class="error-message"></small>
         </div>
-        <div style="height: 20px;"></div>
         <div class="submit_btn">
-            <button>Submit
+            <button type="button" onclick="validateForm()">Submit
                 <i class="fa-solid fa-right-long"></i>
-                </button>
+            </button>
         </div>
     </form>
+    <script>
+        function validateForm() {
+            // Xóa thông báo lỗi cũ
+            document.querySelectorAll(".error-message").forEach(el => el.style.display = "none");
+            document.querySelectorAll(".error").forEach(el => el.classList.remove("error"));
+
+            let isValid = true;
+
+            // Lấy các giá trị
+            const fullName = document.getElementById("fullName");
+            const email = document.getElementById("email");
+            const phone = document.getElementById("phone");
+            const message = document.getElementById("message");
+
+            // Kiểm tra tên
+            if (fullName.value.trim() === "") {
+                showError(fullName, "Full Name is required.");
+                isValid = false;
+            }
+
+            // Kiểm tra email
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!email.value.match(emailPattern)) {
+                showError(email, "Enter a valid email address.");
+                isValid = false;
+            }
+
+            // Kiểm tra số điện thoại (tùy chọn, chỉ số)
+            if (phone.value && isNaN(phone.value)) {
+                showError(phone, "Phone number must be numeric.");
+                isValid = false;
+            }
+
+            // Kiểm tra message
+            if (message.value.trim() === "") {
+                showError(message, "Message is required.");
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert("Form submitted successfully!");
+            }
+        }
+
+        // Hàm hiển thị lỗi
+        function showError(input, message) {
+            const errorMessage = input.nextElementSibling; // Chọn phần tử small kế tiếp của input để đặt thông báo lỗi.
+            errorMessage.textContent = message;
+            errorMessage.style.display = "block";
+            input.classList.add("error"); // Thêm lớp CSS error vào trường input, giúp người dùng dễ nhận biết trường nhập liệu có lỗi.
+        }
+
+    </script>
 </body>
 
 </html>

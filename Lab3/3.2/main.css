@@ -135,7 +135,26 @@ h2 {
   border: none;
   background-color: #000;
   color: #fff;
+  cursor: pointer;
+}
+
+.submit_btn button:active {
+  transform: scale(99%);
 }
 .submit_btn i {
   margin-left: 15px;
 }
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+
+.input_name input.error,
+.contact_input input.error,
+.input_services.error,
+.input_message input.error {
+  border: 1px solid red;
+}
+

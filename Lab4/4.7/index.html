@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Game</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(8, 50px);
+            grid-template-rows: repeat(8, 50px);
+            gap: 10px;
+        }
+
+        button {
+            width: 50px;
+            height: 50px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="button-container"></div>
+    <script>
+        let currentNumber = 1;
+
+        const buttonContainer = document.getElementById('button-container');
+
+        // Tạo và thêm 64 button vào container
+        for (let i = 1; i <= 64; i++) {
+            const button = document.createElement('button');
+            button.textContent = i;
+            button.id = `button-${i}`;
+
+            button.addEventListener('click', () => handleButtonClick(button, i));
+            buttonContainer.appendChild(button);
+        }
+
+
+        // Xử lý sự kiện khi nhấn vào button
+        function handleButtonClick(button, number) {
+            if (number === currentNumber) {
+                button.remove(); 
+                currentNumber++; 
+            } else {
+                alert("Nhấn hộ cái số lớn hơn số trước 1 đơn vị bạn êy!"); 
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
